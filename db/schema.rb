@@ -9,12 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081122123229) do
+ActiveRecord::Schema.define(:version => 20081122164802) do
 
   create_table "cards", :force => true do |t|
     t.string   "commodity"
     t.integer  "number"
     t.integer  "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "players", :force => true do |t|
+    t.string   "identifier"
+    t.integer  "score"
+    t.integer  "given_to"
+    t.datetime "given_at"
+    t.string   "last_set"
+    t.datetime "last_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
