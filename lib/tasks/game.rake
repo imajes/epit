@@ -7,7 +7,7 @@ namespace :game do
       # require 'faker'
       require 'yaml'
       
-      [Card].map(&:delete_all)
+      [Card, Player].map(&:delete_all)
       
       config = YAML.load_file('config/game.yml')["config"]
       c = YAML.load_file('db/commodities.yml')
