@@ -1,0 +1,37 @@
+body {
+  background: #000 url("/images/braces_bg.jpg") top center no-repeat;
+}
+
+div.logo {
+  width: 360px;
+  height: 114px;
+  margin: auto;
+}
+
+div.container {
+  background: #fff;
+  opacity: 0.8;
+  border: 1px solid #efefef;
+  margin: auto;
+  padding: 15px;
+}
+
+div#main {
+  text-align: center;
+  width: 800px;
+  height: 90%;
+}
+
+input.large {
+  font-size: 72px;
+  font-weight: bold;
+  padding: 4px;
+  margin: 6px;
+  text-align: center;
+}
+
+p.button {
+  margin: auto;
+  padding: 20px;
+  width: 400px;  
+}

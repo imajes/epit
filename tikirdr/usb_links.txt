@@ -1,0 +1,20 @@
+usb links:
+
+http://a-k-r.org/ruby-usb/
+http://www.google.com/search?client=safari&rls=en-us&q=usbserial+%22os+x%22&ie=UTF-8&oe=UTF-8
+http://hackerati.com/post/57314994/rfid-on-the-cheap-hacking-tikitag
+http://raa.ruby-lang.org/project/pcsc-ruby/
+http://web.archive.org/web/20020601203633/http://www.ants.at/ruby/PCSC-ruby/
+http://blog.aslakhellesoy.com/2008/3/30/ruby-usb-gems
+http://www.a-k-r.org/ruby-usb/rdoc/
+http://libusb.sourceforge.net/doc/function.usbgetstring.html
+http://libusb.sourceforge.net/api-1.0/group__lib.html#g4ec088aa7b79c4a9599e39bf36a72833
+http://libusb.sourceforge.net/doc/function.usbbulkread.html
+http://groups.google.com/group/touchatag/browse_thread/thread/d5188f21c380072e
+http://www.touchatag.com/developer/devguide
+http://www.acs.com.hk/sales-enquiry.php
+http://www.acs.com.hk/download/ACR122/API_ACR122U.pdf
+https://alioth.debian.org/frs/?group_id=30105&release_id=1327
+http://svn.debian.org/viewsvn/pcsclite/trunk/PCSC/
+http://web.archive.org/web/20020609155510/www.linuxnet.com/middle.html
+http://lists.apple.com/archives/apple-cdsa/2007/Apr/msg00014.html
