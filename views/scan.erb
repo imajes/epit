@@ -1,1 +1,33 @@
-<%= @rv %>
+<script type="text/javascript">
+  $(document).ready(function() {
+    // do stuff when DOM is ready
+   $("#commodities").append("<a href='#'>add a commodity</a>");
+        
+    // add markup to container and apply click handlers to anchors
+    $("#commodities a").click(function(e){
+      // stop normal link click
+      e.preventDefault();
+
+      // send request
+      $.post("/add_commodity", {foo: $(this).html()}, function(xml) {
+        // format and output result
+        $("#rating").html(
+          "Thanks for rating, current average: " +
+          $("average", xml).text() +
+          ", number of votes: " +
+          $("count", xml).text()
+        );
+      });
+    });
+    
+  });
+</script>
+
+<%= @playa.data.inspect %> 
+
+<h2>Hello <%= @playa.name %>.</h2>
+<h3>Please present your commodities for registration:</h3>
+<h3>Found commodities</h3>
+<div id="commodities">
+  <div id="none_yet"><p>None presented yet...</p></div>
+</div>

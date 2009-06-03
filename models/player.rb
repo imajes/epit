@@ -25,6 +25,13 @@ class Player
     $cache.set "user_#{self.id}", to_write
   end
   
+  def name=(n)
+    self.data[:name] = n
+  end
+  
+  def name
+    self.data[:name]
+  end
   
   private
   

@@ -2,6 +2,8 @@
 
 <h2>Please place your Oyster card on the reader, and click the start button to begin</h1>
 
+<%= "<h2><u>Don't forget to start with your oyster card!</u></h2>" if @no_tag %>
+
 <p class="button">
-  <img src="/images/start_button.png" />
+  <a href="/new_scan"><img src="/images/start_button.png" /></a>
 </p>
