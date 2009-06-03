@@ -6,9 +6,9 @@ require 'memcached'
 require 'helpers'
 require 'models/player'
 
-
 set :public, File.dirname(__FILE__) + '/static'
 $cache = Memcached.new("localhost:11211")
+$players = [] # globally accessible list of player uids
 
 get '/' do
   @no_tag = true if params[:no_tag]
@@ -21,8 +21,6 @@ get '/new_scan' do
   @playa = Player.new(get_reader("/"))
   erb :scan
 end
-
-
 
 ## admin type things
 

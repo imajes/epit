@@ -23,6 +23,7 @@ class Player
   def save!
     to_write = Marshal.dump(self.data)
     $cache.set "user_#{self.id}", to_write
+    $players << self.id
   end
   
   def name=(n)

@@ -1,5 +1,6 @@
 body {
   background: #000 url("/images/braces_bg.jpg") top center no-repeat;
+  font: 12px "myriad pro";
 }
 
 div.logo {
