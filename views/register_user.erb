@@ -1,0 +1,8 @@
+<h2>Register new user <%= "- <u>must use your oyster!</u>" if @bad_oyster %></h2>
+
+<form action="/register_new_user" method="POST">
+  <label>Name:</name> <input type="text" name="name" />
+  <input type="submit" value="register..." />
+</form>
+
+<h3><a href="/admin">Back to game runner options</a></h3>
