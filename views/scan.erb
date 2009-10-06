@@ -9,13 +9,10 @@
       e.preventDefault();
 
       // send request
-      $.post("/add_commodity", {foo: $(this).html()}, function(xml) {
+      $.post("/add_commodity", {player: "<%= @playa.id %>"}, function(xml) {
         // format and output result
-        $("#rating").html(
-          "Thanks for rating, current average: " +
-          $("average", xml).text() +
-          ", number of votes: " +
-          $("count", xml).text()
+        $("#commodities").append(
+          "<div class='newc'>" + $("type", xml).text() + " - &pound; " + $("value", xml).text() + "</div>"
         );
       });
     });
@@ -23,11 +20,14 @@
   });
 </script>
 
+<!--
 <%= @playa.data.inspect %> 
+-->
+<div style="text-color:white;" id="playa"><%= @playa.id %></div>
 
 <h2>Hello <%= @playa.name %>.</h2>
 <h3>Please present your commodities for registration:</h3>
-<h3>Found commodities</h3>
+<!-- <h3 style="display:hidden">Found commodities</h3> -->
 <div id="commodities">
-  <div id="none_yet"><p>None presented yet...</p></div>
+  <!-- <div id="none_yet"><p>None presented yet...</p></div> -->
 </div>

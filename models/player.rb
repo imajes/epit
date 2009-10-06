@@ -9,7 +9,7 @@ class Player
     check_id
     # if we don't find 
     unless find(self.id)
-      self.data = {}
+      self.data = {"score" => 0}
     end
       
   end
@@ -24,6 +24,15 @@ class Player
     to_write = Marshal.dump(self.data)
     $cache.set "user_#{self.id}", to_write
     $players << self.id
+  end
+  
+  def score(s)
+    self.data["score"] = self.data["score"] + s
+    save!
+  end
+  
+  def total
+    self.data["score"]
   end
   
   def name=(n)

@@ -2,7 +2,7 @@ class Commodity
   
   TOTAL_CARDS = 29
   VALID_OPTIONS = {"iphone" => 250, "dollars" => 500, "diamonds" => 25000, "stocks" => 10, "friends" => 100000}
-  @@WEIGHTINGS = {"iphone" => 5, "dollars" => 10, "diamonds" => 2, "stocks" => 10, "friends" => 1}
+  @@WEIGHTINGS = {"iphone" => 4, "dollars" => 10, "diamonds" => 2, "stocks" => 10, "friends" => 2}
   
   attr_accessor :commodities
   
@@ -14,6 +14,9 @@ class Commodity
     end
     
     @card = get_reader
+    if @card.nil? 
+      @card = get_reader
+    end
   end
   
   def comms

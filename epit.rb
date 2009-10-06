@@ -2,9 +2,11 @@ require 'rubygems'
 require 'sinatra'
 require 'erb'
 require 'memcached'
-
+require 'json'
 require 'helpers'
 require 'models/player'
+require 'models/commodity'
+require 'models/game'
 
 set :public, File.dirname(__FILE__) + '/static'
 $cache = Memcached.new("localhost:11211")
@@ -22,11 +24,27 @@ get '/new_scan' do
   erb :scan
 end
 
+post '/add_commodity' do
+  c = Commodity.new
+  @playa = Player.new(params[:player])
+  @playa.score(c.score)
+  @ret = "<commodities><type>#{c.kind}</type><value>#{c.score}</value></commodities>"
+  erb :add_ajax, :layout => !request.xhr?
+end
+
 ## admin type things
 
 get '/admin' do
   erb :admin
 end
+
+get '/final_score' do
+  @playa = Player.new(get_reader("/admin"))
+  erb :score
+  
+end
+
+
 
 get '/register_new_user' do
   @no_tag = true if params[:no_tag]
